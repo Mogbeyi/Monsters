@@ -1,5 +1,6 @@
 import { Component } from "react";
 import { CardList } from "./components/card-list/card-list.component.jsx";
+import "./App.css";
 
 class App extends Component {
   constructor() {
@@ -19,7 +20,12 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className="App">
+        <input
+          style={{ marginBottom: "20px" }}
+          type="search"
+          placeholder="Search Monsters"
+        ></input>
         <CardList monsters={this.state.monsters}></CardList>
       </div>
     );
